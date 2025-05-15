@@ -1,0 +1,245 @@
+/* navbar  */
+
+.navbar {
+    background-color: #000;
+    padding: 10px 20px;
+  }
+  
+  .navbar-brand {
+    color: #ddd !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-icons a {
+    color: #ddd;
+    font-size: 1.2rem;
+    margin-left: 15px;
+    text-decoration: none;
+  }
+  
+  .navbar-icons a:hover {
+    color: #fff;
+  }
+  
+  .text-container {
+    color: white;
+  }
+  
+  .card {
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 10px;
+  }
+  
+  .card-img-top {
+    height: 160px;
+    object-fit: contain;
+    background-color: #1a1a1a;
+    padding: 1rem;
+  }
+  
+  .btn-cart {
+    background-color: #e60000;
+    border: none;
+    color: white;
+  }
+  
+  .nav-filter button {
+    margin-right: 0.5rem;
+  }
+  
+  .card {
+    background-color: #111;
+    border: 1px solid #333;
+    color: white;
+  }
+  .card img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+  
+  .card-img-top {
+    height: 160px;
+    object-fit: contain;
+    background-color: #1a1a1a;
+    padding: 1rem;
+  }
+  
+  .btn-danger {
+    background-color: #e60000;
+    border: none;
+  }
+  
+  .advantage-icon {
+    font-size: 2rem;
+    color: red;
+  }
+  
+  /* footer  */
+  .footer {
+    background-color: #000;
+    padding: 40px 0;
+    color: white;
+  }
+  
+  .footer a {
+    color: #aaa;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .subscribe-btn {
+    background-color: red;
+    border: none;
+  }
+  
+  .social-icons i {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    color: white;
+  }
+  /* browseproducts */
+  .browse-card{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border:1px solid white;
+    cursor: pointer;
+  }
+  .card-text{
+    color:white;
+    font-size: 1.5rem;
+  }
+  /* modal  */
+  
+  .modal-bg-container{
+    background-color: black !important;
+  }
+  .modal-card{
+    border: 1px solid rgb(75, 73, 73) !important;
+    padding: 20px;
+  }
+  .model-title{
+    color: rgb(146, 143, 143);
+  }
+  .model-button{
+    height: 40px;
+    width: 130px;
+    padding: 2px;
+    border-radius: 3px;
+    background-color: transparent;
+    color: rgb(122, 117, 117);
+    border: 1px solid;
+  }
+  /* login/signup */
+  
+  .m-title{
+    color: white;
+  }
+  .model-bg-color{
+    background-color: #1b1a1a;
+  }
+  .m-header{
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  .please-login{
+    padding-left: 20px;
+  }
+  .login-signup-button{
+    background-color: #232222;
+    height: 5vh;
+    width: 9vw;
+    color: white;
+    /* padding: 5px; */
+    border: 1px solid;
+  }
+  [input]{
+    border: 2px solid grey;
+    background-color: rgb(13, 13, 13);
+    text-align: start;
+    margin-left: 20px;
+    padding: 8px 400px 10px 5px;
+  }
+  .text{
+    padding-right: 180px;
+    padding-left: 10px;
+    background-color: #1b1a1a;
+    color: white;
+  }
+  .signup-button{
+    background-color: red;
+    width: 29vw;
+    border: 0px solid;
+    color: white;
+    padding: 3px;
+  
+  }
+  .signup-title{
+    padding-top: 40px;
+    padding-left: 20px;
+    color: white;
+    margin-left: 40px;
+  }
+  .signup-description{
+    color: white;
+    margin-left: 40px;
+  }
+  .or-login-with{
+    color: white;
+  }
+  .facebook-button{
+    color: white;
+    background-color: blue;
+    border: 0px solid;
+    margin-left: 15px;
+    margin-right: 10px;
+    height: 5vh;
+    width: 7vw;
+  }
+  .google-button{
+    color: white;
+    background-color: red;
+    border: 0px solid;
+    margin-right: 10px;
+    height: 5vh;
+    width: 7vw;
+  }
+  .twitter-button{
+    color: white;
+    background-color:rgb(42, 161, 208);
+    border: 0px solid;
+    margin-right: 10px;
+    height: 5vh;
+    width: 8vw;
+  }
+  /* or login with */
+  .login-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin: 20px 0;
+  }
+  
+  .login-divider hr {
+    flex: 1;
+    border: none;
+    height: 1px;
+    background-color: #555; /* or a color of your choice */
+    margin: 0 10px;
+  }
+  
+  .login-divider span {
+    white-space: nowrap;
+    font-size: 14px;
+  }
+  
+  
+  

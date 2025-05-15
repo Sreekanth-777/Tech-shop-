@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/cartstyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+   
+    <title>Cart-page</title>
+</head>
+
+<body style="background-color:#111">
+    <div class="bg-container-banner">
+        <!-- <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark navbar-bg-color fixed-top">
+                <a class="navbar-brand text-shop-heading pl-5" href="#">
+                    Tech-Shop
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-link active pr-4" href="#">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                        <a class="nav-link active pr-4" href="#">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                        <a class="nav-link active pr-5" href="#">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div> -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid d-flex justify-content-between">
+                <a class="navbar-brand" href="../html/Home_page.html">Tech-Shop</a>
+                <div class="navbar-icons">
+                    <a href="#" aria-label="Search" title="search"><i class="bi bi-search"></i></a>
+                    <a href="#" aria-label="Cart" title="cart"><i class="bi bi-cart"></i></a>
+                    
+                    <a data-bs-toggle="modal" data-bs-target="#userModal" href="#" aria-label="User">
+                        <i class="bi bi-person"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="double-scrool-bg-container">
+
+                                    <div class=" d-flex flex-row mb-4">
+                                        <div class="col-lg-3">
+                                            <img src="https://res.cloudinary.com/dtr6jprpw/image/upload/v1743846839/jbl660nc-1_bto7fk.png"
+                                                class="jbl-live-660nc-image ">
+                                        </div>
+                                        <div class="col-lg-6 pl-5">
+                                            <h1 class="jbl-live-660nc-title">
+                                                JBL Live 660NC Wireless Over-Ear NC Headphones
+                                            </h1>
+                                            <p class="jbl-live-660nc-price">
+                                                &#8377;9,999
+                                                <del class="pl-2 jbl-live-660nc-strikethrough-price">
+                                                    &#8377;14,999
+                                                </del>
+                                            </p>
+                                            <div class="counter-wrapper">
+                                                <div class="counter-btn">−</div>
+                                                <div class="counter-value">1</div>
+                                                <div class="counter-btn">+</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <a href="#">
+                                                <i class="fa-solid fa-trash delete-icon"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+                                    <div class=" d-flex flex-row mb-4">
+                                        <div class="col-lg-3">
+                                            <img src="https://res.cloudinary.com/dtr6jprpw/image/upload/v1743850156/boat518-1_cbpa2b.png"
+                                                class="jbl-live-660nc-image ">
+                                        </div>
+                                        <div class="col-lg-6 pl-5">
+                                            <h1 class="jbl-live-660nc-title">
+                                                boAt Rockerz 518 On-Ear Wireless Headphones
+                                            </h1>
+                                            <p class="jbl-live-660nc-price">
+                                                &#8377;1,299
+                                                <del class="pl-2 jbl-live-660nc-strikethrough-price">
+                                                    &#8377;3,990
+                                                </del>
+                                            </p>
+                                            <div class="counter-wrapper">
+                                                <div class="counter-btn">−</div>
+                                                <div class="counter-value">1</div>
+                                                <div class="counter-btn">+</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <a href="#">
+                                                <i class="fa-solid fa-trash delete-icon"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class=" d-flex flex-row mb-5">
+                                        <div class="col-lg-3">
+                                            <img src="https://res.cloudinary.com/dtr6jprpw/image/upload/v1744106691/boat131-1_wxg1fj.png"
+                                                class="jbl-live-660nc-image ">
+                                        </div>
+                                        <div class="col-lg-6 pl-5">
+                                            <h1 class="jbl-live-660nc-title">
+                                                boAt Airdopes 131 Wireless In-Ear Earbuds
+                                            </h1>
+                                            <p class="jbl-live-660nc-price">
+                                                &#8377;1,099
+                                                <del class="pl-2 jbl-live-660nc-strikethrough-price">
+                                                    &#8377;2,990
+                                                </del>
+                                            </p>
+                                            <div class="counter-wrapper">
+                                                <div class="counter-btn">−</div>
+                                                <div class="counter-value">1</div>
+                                                <div class="counter-btn">+</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <a href="#">
+                                                <i class="fa-solid fa-trash delete-icon"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+
+                                    <div class=" d-flex flex-row mb-4">
+                                        <div class="col-lg-3">
+                                            <img src="https://res.cloudinary.com/dtr6jprpw/image/upload/v1743851109/boat110-1_wrnhci.png"
+                                                class="jbl-live-660nc-image ">
+                                        </div>
+                                        <div class="col-lg-6 pl-5">
+                                            <h1 class="jbl-live-660nc-title">
+                                                boAt BassHeads 110 In-Ear Wired earphones
+                                            </h1>
+                                            <p class="jbl-live-660nc-price">
+                                                &#8377;449
+                                                <del class="pl-2 jbl-live-660nc-strikethrough-price">
+                                                    &#8377;999
+                                                </del>
+                                            </p>
+                                            <div class="counter-wrapper">
+                                                <div class="counter-btn">−</div>
+                                                <div class="counter-value">1</div>
+                                                <div class="counter-btn">+</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <a href="#">
+                                                <i class="fa-solid fa-trash delete-icon"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <h1 class="order-summray">
+                        Order Summary ( 4 items )
+                    </h1>
+                    <div>
+                        <h1 class="orginal-price">
+                            Orginal Price<span class="order-summray-span">&#8377;22,978</span>
+                        </h1>
+                        <h1 class="discount">
+                            Discount<span class="discount-span">-&#8377;10,132</span>
+                        </h1>
+                        <h1 class="delivery-free">
+                            Delivery<span class="free-span">Free</span>
+                        </h1>
+                    </div>
+                    <hr style="border: 1px solid #605e5e;" class="mt-5">
+
+                    <div>
+                        <h1 class="total-price">
+                            Total Price <span class="total-price-span">&#8377;12,846</span>
+                        </h1>
+                        <button class="checkout-button mt-4">
+                            Checkout
+                        </button>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="footer ">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-light">Tech-Shop</h5>
+                    <p>Subscribe to our Email alerts to receive early discount offers and new product info.</p>
+                    <input type="email" class="form-control mb-2 bg-black text-secondary" placeholder="Email Address*">
+                    <button class="btn btn-danger subscribe-btn w-30 ">Subscribe</button>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h6 class="text-white">Help</h6>
+                    <a href="#">FAQs</a><br>
+                    <a href="#">Track Order</a><br>
+                    <a href="#">Cancel Order</a><br>
+                    <a href="#">Return Order</a><br>
+                    <a href="#">Warranty Info</a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h6 class="text-white">Policies</h6>
+                    <a href="#">Return Policy</a><br>
+                    <a href="#">Security</a><br>
+                    <a href="#">Sitemap</a><br>
+                    <a href="#">Privacy Policy</a><br>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h6 class="text-white">Company</h6>
+                    <a href="#">About Us</a><br>
+                    <a href="#">Contact Us</a><br>
+                    <a href="#">Service Centres</a><br>
+                    <a href="#">Careers</a><br>
+                    <a href="#">Affiliates</a>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between mt-4 flex-wrap text-center text-md-start">
+                <p class="mb-0">2025 | All Rights Reserved. Built by | <strong>SHAIK ATHIK</strong></p>
+                <div class="social-icons mt-2 mt-md-0">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-linkedin"></i>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JBL Product Display</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+    }
+
+    .product-container {
+      display: flex;
+      padding: 40px;
+      gap: 30px;
+    }
+
+    .thumbnail-column {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .thumbnail-column label {
+      cursor: pointer;
+    }
+
+    .thumbnail-column img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border: 2px solid transparent;
+      border-radius: 5px;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .main-image img {
+      max-width: 400px;
+      border-radius: 10px;
+    }
+
+    #img1:checked~.main-image img#main1,
+    #img2:checked~.main-image img#main2,
+    #img3:checked~.main-image img#main3 {
+      display: block;
+    }
+
+    .main-image img {
+      display: none;
+    }
+
+    .product-info .price {
+      font-size: 2rem;
+    }
+
+    .badge-success {
+      background-color: #28a745;
+    }
+
+    .rating-stars {
+      color: gold;
+    }
+
+    .btn-offer {
+      background-color: #222;
+      color: #ccc;
+      border: 1px solid #444;
+    }
+
+    .table-product {
+      margin-left: 100px;
+    }
+
+    .container-product {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+  
+
+    
+  </style>
+</head>
+
+<body class="Body">
+  <!-- navbar  -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid d-flex justify-content-between">
+      <a class="navbar-brand" href="../html/Home_page.html">Tech-Shop</a>
+      <div class="navbar-icons">
+        <a href="#" aria-label="Search" title="search"><i class="bi bi-search"></i></a>
+        <a href="../html/cart.html" aria-label="Cart" title="cart"><i class="bi bi-cart"></i></a>
+        <a data-bs-toggle="modal" data-bs-target="#Profile" href="#" aria-label="User" title="Login/signup">
+          <i class="bi bi-person"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Registration page strat here -->
+
+  <!-- model login start -->
+  <div class="modal" tabindex="-1" id="Profile">
+    <div class="modal-dialog ">
+      <div class="modal-content ">
+        <div class="m-header model-bg-color">
+          <h5 class=" m-title">Hello!</h5>
+        </div>
+        <div class="modal-body model-bg-color">
+          <p class="m-title">Access account and management orders</p>
+          <button type="button" class="login-signup-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Login / signup
+          </button>
+          <hr style="border: 1px solid #605e5e;" class="mb-0">
+        </div>
+        <div class="model-bg-color">
+          <p class="model-bg-color m-title please-login mb-3">Please login</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- model login end -->
+
+  <!-- model signup start -->
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="model-bg-color">
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <div>
+              <span aria-hidden="true" class="x">X</span>
+            </div>
+          </button>
+          <h5 class="signup-title " id="exampleModalLabel">Signup</h5>
+
+
+        </div>
+        <div class="modal-body model-bg-color">
+          <p class="signup-description">Already have an account ? <span>Login</span></p>
+          <form method="" class="text-center">
+            <input type="text" placeholder="Username" class="text mb-3 ml-3 pb-1">
+            <input type="email" placeholder="Email" class="text mr-5 mb-3 ml-3 pb-1">
+            <input type="password" placeholder="Password" class="text mr-5 mb-3 ml-3 pb-1">
+            <input type="password" placeholder="Confirm Password" class="text mr-5 mb-3 ml-3 pb-1">
+            <button class="signup-button ">
+              Signup
+            </button>
+            <div>
+
+              <div class="login-divider">
+                <hr>
+                <span>or login with</span>
+                <hr>
+              </div>
+
+            </div>
+
+            <div class="mt-3 mb-3">
+              <button class="facebook-button">
+                Facebook
+              </button>
+
+              <button class="google-button">
+                Google
+              </button>
+
+              <button class="twitter-button">
+                Twitter
+              </button>
+            </div>
+        </div>
+      </div>
+
+
+      </form>
+    </div>
+  </div>
+
+  <!-- model signup end -->
+
+  <div class="container">
+    <!-- <h2 class="text-primary">Tech-Shop</h2> -->
+
+    <div class="product-container">
+      <!-- Hidden radio buttons for image selection -->
+      <input type="radio" name="img-select" id="img1" checked>
+      <input type="radio" name="img-select" id="img2">
+      <input type="radio" name="img-select" id="img3">
+
+      <!-- Thumbnails -->
+      <div class="thumbnail-column">
+        <label style="border:1px solid white" for="img1"><img src="../image/images/products/jbl660nc-1.png" alt=""></label>
+        <label style="border:1px solid white" for="img2"><img src="../image/images/products/jbl660nc-2.png" alt=""></label>
+        <label style="border:1px solid white" for="img3"><img src="../image/images/products/jbl660nc-3.png" alt=""></label>
+        <label style="border:1px solid white" for="img3"><img src="../image/images/products/jbl660nc-4.png" alt=""></label>
+      </div>
+
+      <!-- Main Image Area -->
+      <div class="main-image">
+        <img id="main1" src="../image/images/products/jbl660nc-1.png?text=Main+B" alt="Main A">
+        <img id="main2" src="../image/images/products/jbl660nc-2.png?text=Main+B" alt="Main B">
+        <img id="main3" src="../image/images/products/jbl660nc-3.png?text=Main+C" alt="Main C">
+        <img id="main4" src="../image/images/products/jbl660nc-4.png?text=Main+D" alt="Main D">
+      </div>
+
+      <!-- Product Info -->
+      <div class="product-info">
+        <h3>JBL Live 660NC</h3>
+        <p>Wireless Over-Ear NC Headphones</p>
+        <div class="rating-stars text-danger">★★★★★ <span class="text-secondary">| 1234 Ratings</span></div>
+        <div class="price">₹9,999 <span class="text-decoration-line-through text-secondary ms-2">₹14,999</span></div>
+        <p class="text-success">You save: ₹5,000 (33%)</p>
+        <p class="text-secondary">(Inclusive of all taxes) </p>
+        <br>
+
+        <div class="mb-3">
+          <span class="badge badge-success p-2">✓ In Stock</span>
+        </div>
+        <hr>
+        <div>
+
+          <button class="btn btn-offer">No Cost EMI on Credit Card</button>
+          <button class="btn btn-offer">Pay Later & Avail Cashback</button>
+        </div>
+        <br>
+        <hr>
+        <div class="card-footer  border-0 ">
+          <button class="btn btn-danger w-30">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-product ">
+    <button class=" btn btn-danger">Specifications</button>
+    <button class=" btn btn-outline-black text-light">Overview</button>
+    <button class=" btn btn-danger-black text-light">Reviews</button>
+  </div>
+  <br><br>
+  <div class="d-flex flex-row">
+    <div class="specifications-description-1n ">
+      <p>Brand</p><br>
+      <p>Model</p><br>
+      <p>Generic Name</p><br>
+      <p>Headphone Type</p><br>
+      <p>Connectivity</p><br>
+      <p>Microphone</p><br>
+    </div>
+    <div class="specifications-description-2">
+      <p class="jbl">JBL</p><br>
+      <p class="jbl-live">JBL Live 660NC</p><br>
+      <p class="headphones">Headphones</p><br>
+      <p class="over-ear">Over Ear</p><br>
+      <p class="wireless">Wireless</p><br>
+      <p class="yes">Yes</p><br>
+    </div>
+      
+  </div>
+
+  <h3 class="text-white text-center mb-5">Related Products</h3>
+  <div class="container">
+    <div class="row">
+      <!-- Product Card 1 -->
+      <div class="col-md-3 mb-4">
+        <a href="../html/Product_details.html" style="text-decoration: none; color: inherit;"></a>
+        <div class="card h-100">
+          <img src="../image/images/products/jbl660nc-1.png" class="card-img-top bg-gray" alt="boAt Rockerz 518">
+          <div class="card-body bg-black">
+            <p class="mb-1 text-danger">★★★★★</p>
+
+            <h5 class="card-title text-white">JBL Live 660NC</h5>
+            <p class="card-text text-secondary">Wireless Over-Ear NC<br>Headphones</p>
+            <hr class="text-light">
+            <h6 class="text-white">₹9,999 <del class="text-secondary">₹14,999</del></h6>
+          </div>
+          <div class="card-footer bg-black border-0 ">
+            <a href="../html/Product_details.html" class="btn btn-danger w-100">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <!-- product card 2  -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100">
+          <img src="../image/images/products/boat518-1.png" class="card-img-top bg-gray" alt="boAt Rockerz 518">
+          <div class="card-body bg-black">
+            <p class="mb-1 text-danger">★★★★★</p>
+
+            <h5 class="card-title text-white">boAt Rockerz 518</h5>
+            <p class="card-text text-secondary">On-Ear Wireless Headphones</p>
+            <hr class="text-light">
+            <h6 class="text-white">₹1,299 <del class="text-secondary">₹3,999</del></h6>
+          </div>
+          <div class="card-footer bg-black border-0 ">
+            <button class="btn btn-danger w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <!-- product card 3  -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100">
+          <img src="../image/images/products/boat410-1.png" class="card-img-top bg-gray" alt="boAt Rockerz 518">
+          <div class="card-body bg-black">
+            <p class="mb-1 text-danger">★★★★★</p>
+
+            <h5 class="card-title text-white">boAt Rockerz 410</h5>
+            <p class="card-text text-secondary">Bluetooth & wired On-Ear<br>Headphones</p>
+            <hr class="text-light">
+            <h6 class="text-white">₹1,599 <del class="text-secondary">₹2,990</del></h6>
+          </div>
+          <div class="card-footer bg-black border-0 ">
+            <button class="btn btn-danger w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <!-- prodyct card 4  -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100">
+          <img src="../image/images/products/sonyXb910n-1.png" class="card-img-top bg-gray" alt="boAt Rockerz 518">
+          <div class="card-body bg-black">
+            <p class="mb-1 text-danger">★★★★★</p>
+
+            <h5 class="card-title text-white">Sony WH-XB910N</h5>
+            <p class="card-text text-secondary">Wireless Over-Ear<br>Headphones</p>
+            <hr class="text-light">
+            <h6 class="text-white">₹13,489 <del class="text-secondary">₹19,990</del></h6>
+          </div>
+          <div class="card-footer bg-black border-0 ">
+            <button class="btn btn-danger w-100">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Advantage section -->
+  <div class="container my-5 text-center">
+    <h3 class="text-white mb-4">Our Advantages</h3>
+    <div class="row">
+      <div class="col-md-3">
+        <i class="bi bi-truck advantage-icon"></i>
+        <h6 class="mt-2 text-white">Express Delivery</h6>
+        <small class="text-secondary">Ships in 24 Hours</small>
+      </div>
+      <div class="col-md-3">
+        <!-- <i class="bi bi-shield advantage-icon"></i> -->
+        <i class="bi bi-shield-shaded advantage-icon"></i>
+        <h6 class="mt-2 text-white">Brand Warranty</h6>
+        <small class="text-secondary">100% Original products</small>
+      </div>
+      <div class="col-md-3">
+        <i class="bi bi-tags advantage-icon"></i>
+        <h6 class="mt-2 text-white">Exciting Deals</h6>
+        <small class="text-secondary">On all prepaid orders</small>
+      </div>
+      <div class="col-md-3">
+        <i class="bi bi-lock advantage-icon"></i>
+        <h6 class="mt-2 text-white">Secure Payments</h6>
+        <small class="text-secondary">SSL / Secure certificate</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+
+
+  <div class="footer mt-5">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-3 mb-4">
+          <h5 class="text-light">Tech-Shop</h5>
+          <p>Subscribe to our Email alerts to receive early discount offers and new product info.</p>
+          <input type="email" class="form-control mb-2 bg-black " placeholder="Email Address*">
+          <button class="btn btn-danger subscribe-btn w-30">Subscribe</button>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h6 class="text-white">Help</h6>
+          <a href="#">FAQs</a><br>
+          <a href="#">Track Order</a><br>
+          <a href="#">Cancel Order</a><br>
+          <a href="#">Return Order</a><br>
+          <a href="#">Warranty Info</a>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h6 class="text-white">Policies</h6>
+          <a href="#">Return Policy</a><br>
+          <a href="#">Security</a><br>
+          <a href="#">Sitemap</a><br>
+          <a href="#">Privacy Policy</a><br>
+          <a href="#">Terms & Conditions</a>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h6 class="text-white">Company</h6>
+          <a href="#">About Us</a><br>
+          <a href="#">Contact Us</a><br>
+          <a href="#">Service Centres</a><br>
+          <a href="#">Careers</a><br>
+          <a href="#">Affiliates</a>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between mt-4 flex-wrap text-center text-md-start">
+        <p class="mb-0">2025 | All Rights Reserved. Built by | <strong>SHAIK ATHIK</strong></p>
+        <div class="social-icons mt-2 mt-md-0">
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-twitter"></i>
+          <i class="bi bi-linkedin"></i>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

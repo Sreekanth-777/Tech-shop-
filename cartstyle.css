@@ -1,0 +1,125 @@
+.bg-container-banner{
+    background-color: black;
+    height: 100vh;
+}
+.navbar-bg-color{
+    background-color: black;
+}
+.bg-container-banner-section{
+    background-color: black;
+}
+.double-scrool-bg-container{
+    background-color: rgb(17, 16, 16);
+    height: 61vh;
+    margin-top: 10vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    
+}
+.jbl-live-660nc-image{
+    height: 180px;
+    width: 180px;
+    padding-top: 40px;
+    padding-left: 40px;
+}
+.jbl-live-660nc-title{
+    color: white;
+    padding-top: 40px;
+    font-size: 18px;
+    font-family: "Roboto";
+}
+.jbl-live-660nc-price{
+    color: white;
+    font-size: 25px;
+    font-family: "Roboto";
+}
+.jbl-live-660nc-strikethrough-price{
+    font-size: 16px;
+}
+.counter-wrapper {
+    display: inline-flex;
+    align-items: center;
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-family: sans-serif;
+  }
+
+  .counter-btn {
+    width: 40px;
+    height: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #bfbfc3;
+    font-size: 1.5rem;
+    background-color: transparent;
+  }
+
+  .counter-value {
+    width: 40px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: red;
+    background-color: #333;
+  }
+.delete-icon{
+    padding-top: 44px;
+    color: white;
+    padding-left: 25px;
+}
+.order-summray{
+    color: white;
+}
+
+.order-summray{
+    color: white;
+    padding-top: 80px;
+    font-size: 20px;
+    font-family: "Roboto";
+}
+.orginal-price{
+    color: white;
+    font-size: 18px;
+    padding-top: 5vh;
+}
+.order-summray-span{
+    padding-left: 20vh;
+}
+.discount{
+    color: white;
+    font-size: 17px;
+    padding-top: 10px;
+}
+.discount-span{
+    padding-left: 24vh;
+    color: green;
+}
+.delivery-free{
+    color: white;
+    font-size: 17px;
+    padding-top: 10px;
+}
+.free-span{
+    padding-left: 29vh;
+    color: green;
+}
+.total-price{
+    color: white;
+    font-size: 20px;
+    padding-top: 3vh;
+    padding-left: 5px;
+}
+.total-price-span{
+    padding-left: 20vh;
+}
+.checkout-button{
+    height: 30px;
+    width: 340px;
+    padding-bottom: 3vh;
+    color: white;
+    background-color: rgb(178, 4, 4);
+    border-width: 0px;
+}
